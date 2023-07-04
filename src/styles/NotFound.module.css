@@ -1,0 +1,41 @@
+.notFoundPage {
+  align-items: center;
+  background-color: #023031;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.notFoundPBox {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.notFoundPBox > img {
+  width: 10em;
+}
+
+.notFoundPBox > h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.notFoundPBox > div {
+  /* align-items: center; */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+
+@media only screen and (min-width: 601px) {
+
+  .notFoundPBox {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,16 @@
+.input {
+  display: none;
+}
+
+.label {
+  cursor: pointer;
+}
+
+.label i {
+  font-size: 20px;
+  color: gray;
+}
+
+.input:checked + .label i {
+  color: red;
+}

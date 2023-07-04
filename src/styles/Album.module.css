@@ -1,0 +1,17 @@
+.pageAlbum {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pageAlbumLeft {
+  align-items: center;
+  display: flex;
+  justify-content: baseline;
+}
+
+.pageAlbumRigth {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}

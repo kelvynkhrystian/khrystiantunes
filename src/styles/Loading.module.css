@@ -1,0 +1,9 @@
+/* // não pode usar hifen, use camelCase ou underline */
+.loading {
+  height: 100%;
+  width: 100%;
+}
+
+.img {
+  width: 1em;
+}

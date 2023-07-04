@@ -1,0 +1,91 @@
+.search {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.searchUp {
+  margin: 50px;
+}
+
+.searchInput {
+  border: 1px solid #023031;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 5px;
+  width: 400px;
+}
+
+.searchButton {
+  background-color: #023031;
+  border: 1px solid #023031;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+}
+
+.searchButton:hover {
+  color: #2fc18c;
+}
+
+.searchList {
+  align-items: center;
+  border: #023031 3px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
+
+.renderList {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.renderizou {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.renderizouLista {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.albumCard {
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgb(190, 190, 190);
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  justify-content: center;
+  margin: 20px;
+  width: 200px;
+}
+
+.imgAlbum {
+  border-radius: 10px;
+  margin: 1px;
+  width: 150px;
+}
+
+.albumCardButton {
+  background-color: #023031;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 30px;
+  text-decoration: none;
+}
+
