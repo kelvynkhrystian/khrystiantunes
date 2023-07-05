@@ -29,14 +29,15 @@
   width: 85%;
 }
 
-.favoritesPage  p{
-  padding: 20px 10px;
-}
+/* .favoritesPage  p{
+  padding-top: 10px;
+} */
 
 .imgBox  {
   align-items: center;
   display: flex;
   justify-content: center;
+  margin: 5px;
   width: 30%;
 }
 
@@ -48,6 +49,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
   width: 90%;
 }
 
