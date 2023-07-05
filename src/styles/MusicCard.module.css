@@ -14,3 +14,7 @@
 .input:checked + .label i {
   color: red;
 }
+
+.audio {
+  width: 100%;
+}

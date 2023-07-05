@@ -37,6 +37,11 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  width: 30%;
+}
+
+.favoritesPage > section > section {
+  width: 70%;
 }
 
 .favoritesPage > section > section > div{
