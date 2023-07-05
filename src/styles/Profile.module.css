@@ -19,7 +19,7 @@
 }
 
 .profilePage > .profileBox > img {
-  border: 3px solid #023031;
+  /* border: 3px solid #023031; */
   border-radius: 10px;
   width: 80%;
 }
