@@ -16,7 +16,7 @@
   box-shadow: 5px 5px 5px 5px rgb(190, 190, 190);
   display: flex;
   flex-direction: column;
-  height: 40%;
+  height: 20%;
   justify-content: center;
   width: 90%;
 }
@@ -56,7 +56,8 @@
 }
 
 .img {
-  margin: 25px;
+  width: 250px;
+  margin: 20px;
 }
 
 
