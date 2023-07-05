@@ -47,17 +47,17 @@ class Header extends React.Component {
             className={ styles.link }
             data-testid="link-to-search"
           >
-            <h2>Search</h2>
+            <h3>Search</h3>
           </Link>
           <Link
             to="/favorites"
             className={ styles.link }
             data-testid="link-to-favorites"
           >
-            <h2>Favorites</h2>
+            <h3>Favorites</h3>
           </Link>
           <Link to="/profile" className={ styles.link } data-testid="link-to-profile">
-            <h2>Profile</h2>
+            <h3>Profile</h3>
           </Link>
         </nav>
       </header>
