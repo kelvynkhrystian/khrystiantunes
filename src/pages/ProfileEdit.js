@@ -62,8 +62,8 @@ class ProfileEdit extends React.Component {
     return (
       <main>
         <Header />
-        { loading ? <Loading /> : (
-          <article data-testid="page-profile-edit" className={ styles.edit }>
+        <article data-testid="page-profile-edit" className={ styles.edit }>
+          { loading ? <Loading /> : (    
             <section className={ styles.editBox }>
               <div className={ styles.editBoxName }>
                 <h3>Name:</h3>
@@ -112,9 +112,9 @@ class ProfileEdit extends React.Component {
               >
                 <h3>Salvar</h3>
               </button>
-            </section>
-          </article>
-        )}
+            </section>  
+          )}
+        </article>
         { redirecionar && <Redirect to="/profile" />}
       </main>
     );

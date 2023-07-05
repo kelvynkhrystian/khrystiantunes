@@ -1,9 +1,12 @@
 /* // não pode usar hifen, use camelCase ou underline */
 .loading {
-  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
   width: 100%;
 }
 
 .img {
-  width: 1em;
+  width: 10%;
 }
