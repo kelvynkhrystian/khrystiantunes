@@ -49,6 +49,7 @@
 
   .profilePage > .profileBox {
     height: 425px;
+    margin-top: 25px;
     width: 30%;
   }
 
