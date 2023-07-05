@@ -1,6 +1,7 @@
 /* Mini reset CSS */
 * {
   border: 0;
+  box-sizing: border-box;
   font-family: monospace, -apple-system, 'Helvetica Neue', sans-serif;
   list-style: none;
   margin: 0;
