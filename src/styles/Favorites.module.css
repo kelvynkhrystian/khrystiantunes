@@ -11,7 +11,7 @@
   border-radius: 5px;
   box-shadow: 5px 5px 5px 5px rgb(190, 190, 190);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 15px;
   width: 90%;
 }
@@ -36,13 +36,18 @@
 .imgBox  {
   align-items: center;
   display: flex;
-  justify-content: center;
-  margin: 5px;
-  width: 30%;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.imgBox > img {
+  width: 100%;
 }
 
 .favoritesPage > section > section {
-  width: 70%;
+  width: 80%;
+  /* height: 100%; */
+  /* background-color: #023031; */
 }
 
 .favoritesPage > section > section > div{

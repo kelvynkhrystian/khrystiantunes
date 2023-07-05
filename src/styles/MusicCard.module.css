@@ -16,6 +16,8 @@
 }
 
 .audio {
-  padding: 5px 0px;
-  width: 90%;
+  border-radius: 0;
+  margin: 10px 0;
+  height: 35px;
+  width: 95%;
 }
