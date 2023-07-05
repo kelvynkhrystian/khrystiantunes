@@ -31,7 +31,7 @@ class Profile extends React.Component {
           src={ image || 'https://cdn-icons-png.flaticon.com/512/74/74472.png' }
           alt="imagem do perfil"
         />
-        <p>{name}</p>
+        <p><strong>{name}</strong></p>
         <p>{email}</p>
         <p>{description}</p>
         <div>
