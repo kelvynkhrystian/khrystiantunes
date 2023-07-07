@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 
 import { getUser, updateUser } from '../services/userAPI';
-import Loading from '../components/Loading';
+import Loading from '../components/LoadingBig';
 import Header from '../components/Header';
 
 import styles from '../styles/ProfileEdit.module.css';
