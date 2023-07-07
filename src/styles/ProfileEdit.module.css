@@ -103,6 +103,15 @@ button h3 {
 }
 
 
+.editBox > button:disabled {
+  background-color: #b0b7b8;
+}
+
+.editBox > button:active {
+  scale: 0.95;
+}
+
+
 @media only screen and (min-width: 601px) {
 
   .editBox {
