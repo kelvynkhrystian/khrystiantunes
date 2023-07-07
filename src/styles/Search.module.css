@@ -115,3 +115,20 @@
   text-decoration: none;
 }
 
+@media only screen and (min-width: 601px) {
+
+  .searchUp {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .searchButton {
+    margin: 0;
+    width: 20%;
+  }
+
+  .searchInput {
+    width: 70%;
+    padding: 0 10px;
+  }
+}
