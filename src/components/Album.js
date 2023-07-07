@@ -8,6 +8,8 @@ import Loading from './Loading';
 import Header from './Header';
 import MusicCard from './MusicCard';
 
+import styles from '../styles/Album.module.css';
+
 class Album extends React.Component {
   state = {
     musicList: [],
@@ -32,16 +34,17 @@ class Album extends React.Component {
     const { musicList, loading, verified } = this.state;
     return (
       <>
-        { loading && <Loading /> }
+        
         <Header />
-        <div className="section-album">
-          {musicList.length > 0 && (
-            <div className="page-album">
+        <article className={ styles.pageAlbum }>
+          { loading && <Loading /> }
+          { musicList.length > 0 && (
+            <div className={ styles.pageAlbumLeft }>
               <img
                 src={ musicList[0].artworkUrl100 }
                 alt={ musicList[0].collectionName }
               />
-              <div className="paragrafo-album">
+              <div>
                 <p data-testid="artist-name">
                   { musicList[0].artistName }
                 </p>
@@ -51,19 +54,23 @@ class Album extends React.Component {
               </div>
             </div>
           )}
-          {musicList && musicList.filter((item) => item.trackId)
-            .map((music) => (
-              <MusicCard
-                key={ music.trackId }
-                trackName={ music.trackName }
-                previewUrl={ music.previewUrl }
-                trackId={ music.trackId }
-                musics={ music }
-                id={ music.trackId }
-                name={ music.trackName }
-                checked={ verified }
-              />))}
-        </div>
+          <section className={ styles.pageAlbumRigth }>
+            {musicList && musicList.filter((item) => item.trackId)
+              .map((music) => (
+                <MusicCard
+                  key={ music.trackId }
+                  trackName={ music.trackName }
+                  previewUrl={ music.previewUrl }
+                  trackId={ music.trackId }
+                  musics={ music }
+                  id={ music.trackId }
+                  name={ music.trackName }
+                  checked={ verified }
+                />
+              ))
+            }
+          </section>
+        </article>
       </>
     );
   }
