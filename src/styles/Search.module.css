@@ -61,7 +61,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90%;
+  width: 100%;
 }
 
 .renderizou {
@@ -131,5 +131,9 @@
   .searchInput {
     width: 75%;
     padding: 0 10px;
+  }
+
+  .renderList {
+    width: 90%;
   }
 }
