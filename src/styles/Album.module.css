@@ -32,6 +32,8 @@
 
 .pageAlbumRigth > section {
   align-items: center;
+  display: flex;
+  flex-direction: column;
   border-radius: 5px;
   box-shadow: 3px 3px 3px 3px rgb(190, 190, 190);
   margin-bottom: 15px;
@@ -43,6 +45,6 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 10px 20px;
   width: 100%;
 }
