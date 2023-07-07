@@ -45,9 +45,9 @@ class Album extends React.Component {
                 alt={ musicList[0].collectionName }
               />
               <div>
-                <p data-testid="artist-name">
+                <h5 data-testid="artist-name">
                   { musicList[0].artistName }
-                </p>
+                </h5>
                 <p data-testid="album-name">
                   { musicList[0].collectionName }
                 </p>

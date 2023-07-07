@@ -48,3 +48,42 @@
   padding: 10px 20px;
   width: 100%;
 }
+
+
+@media only screen and (min-width: 601px) {
+
+  .pageAlbum {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .pageAlbumLeft {
+    height: 100%;
+    width: 30%;
+  }
+
+  .pageAlbumRigth {
+    align-items: self-end;
+    width: 63%;
+  }
+
+  .pageAlbumLeft > img {
+    margin: 0;
+    width: 100%;
+  }
+
+  .pageAlbumRigth > section {
+    width: 100%;
+  }
+
+  .pageAlbumLeft > div {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .pageAlbumLeft  h5 {
+    margin: 5px 0;
+  }
+}
