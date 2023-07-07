@@ -43,12 +43,9 @@ class MusicCard extends React.Component {
     if (loading) return <Loading />;
     return (
       <section className={ styles.sectionleft }>
-        <div lassName={ styles.divleft }>
-          <p>
-            { trackName }
-          </p>
+        <div className={ styles.divleft }>
+          <p>{ trackName }</p>
           <label htmlFor={ trackName } className={ styles.label }>
-            <i class="fas fa-heart"></i>
             <input
               type="checkbox"
               id={ trackName }
@@ -58,16 +55,14 @@ class MusicCard extends React.Component {
               checked={ verified }
               className={ styles.input }
             />
+            <i className="fas fa-heart"></i>
           </label>
         </div>
-        
+
         <audio data-testid="audio-component" src={ previewUrl } controls className={ styles.audio }>
           <track kind="captions" />
-          O seu navegador não suporta o elemento
-          <code>audio</code>
-          .
+          Seu navegador não suporta o elemento <code>audio</code>.
         </audio>
-        
       </section>
     );
   }

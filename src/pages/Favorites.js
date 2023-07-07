@@ -37,9 +37,9 @@ class Favorites extends React.Component {
     return (
       <>
         <Header />
+        <h3 className={ styles.h3 }>Músicas Favoritas:</h3>
         { loading ? <Loading /> : (
           <>
-            <h3 className={ styles.h3 }>Músicas Favoritas:</h3>
             <article className={ styles.favoritesPage }>
               {favoritesSong.map((item) => (
                 <section key={ item.trackId }>

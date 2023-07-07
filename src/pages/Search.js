@@ -100,11 +100,11 @@ class Search extends React.Component {
                         alt={ album.artistId }
                         className={ styles.imgAlbum }
                       />
-                      <div
+                      <p
                         className={ styles.albumCardName }
                       >
                         { album.collectionName }
-                      </div>
+                      </p>
                       <h4>{ album.artistName }</h4>
                       <Link
                         key={ album.collectionId }
