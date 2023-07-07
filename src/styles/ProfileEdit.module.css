@@ -28,6 +28,7 @@
   font-size: large;
   margin-top: 10px;
   padding: 5px;
+  width: 100%;
 }
 
 .editBox > div > textarea {
@@ -36,60 +37,8 @@
   border: #023031 2px solid;
   font-size: large;
   padding: 5px;
-}
-
-/* input {
-  border-radius: 5px;
-  margin-left: 40px;
-}
-
-textarea {
-  border-radius: 5px;
-  margin-left: 40px;
-} */
-
-
-/* 
-.editBoxName {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
 }
-
-.editBoxEmail {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.editBoxDescricao {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.editBoxImagem {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-button {
-  align-items: center;
-  background-color: rgb(73, 73, 233);
-  border-radius: 5px;
-  color: white;
-  margin: 25px;
-  padding: 8px 80px;
-}
-
-button h3 {
-  margin: 1px;
-} */
 
 .editBox > button {
   align-items: center;
@@ -102,7 +51,6 @@ button h3 {
   width: 90%;
 }
 
-
 .editBox > button:disabled {
   background-color: #b0b7b8;
 }
@@ -110,7 +58,6 @@ button h3 {
 .editBox > button:active {
   scale: 0.95;
 }
-
 
 @media only screen and (min-width: 601px) {
 
@@ -124,5 +71,4 @@ button h3 {
     margin-top: 20px;
     width: 30%;
   }
-
 }
