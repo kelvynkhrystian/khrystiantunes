@@ -40,7 +40,6 @@ class MusicCard extends React.Component {
   render() {
     const { loading, verified } = this.state;
     const { trackName, previewUrl, trackId } = this.props;
-    if (loading) return <Loading />;
     return (
       <section className={ styles.sectionleft }>
         { loading ? <Loading /> : (

@@ -36,10 +36,11 @@
   display: flex;
   justify-content: flex-start;
   margin: 10px;
+  width: 25%;
 }
 
 .favoritesPage > section > section {
-  width: 80%;
+  width: 75%;
   /* height: 100%; */
   /* background-color: #023031; */
 }
