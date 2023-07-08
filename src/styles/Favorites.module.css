@@ -12,6 +12,7 @@
   border-radius: 5px;
   box-shadow: 5px 5px 5px 5px rgb(190, 190, 190);
   display: flex;
+  height: 100px;
   justify-content: space-between;
   margin-bottom: 15px;
   width: 90%;
@@ -25,14 +26,10 @@
   width: 100%;
 }
 
-.favoritesPage  img{
+.imgBox > img{
   border-radius: 5px;
   width: 85%;
 }
-
-/* .favoritesPage  p{
-  padding-top: 10px;
-} */
 
 .imgBox  {
   align-items: center;
