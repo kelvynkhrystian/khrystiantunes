@@ -1,17 +1,98 @@
 .pageAlbum {
   align-items: center;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .pageAlbumLeft {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: baseline;
+  margin-bottom: 25px;
+  width: 90%;
+}
+
+.pageAlbumLeft > img {
+  border-radius: 10px;
+  margin: 15px;
+  width: 50%;
 }
 
 .pageAlbumRigth {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  width: 100%;
+}
+
+.pageAlbumRigth > article {
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px rgb(190, 190, 190);
+  height: 100px;
+  margin-bottom: 15px;
+  width: 90%;
+}
+
+.pageAlbumRigth > section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px rgb(190, 190, 190);
+  height: 100px;
+  margin-bottom: 15px;
+  /* padding: 10px; */
+  width: 90%;
+}
+
+.pageAlbumRigth > section > div{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 601px) {
+
+  .pageAlbum {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .pageAlbumLeft {
+    height: 100%;
+    width: 30%;
+  }
+
+  .pageAlbumRigth {
+    align-items: self-end;
+    width: 63%;
+  }
+
+  .pageAlbumLeft > img {
+    margin: 0;
+    width: 100%;
+  }
+
+  .pageAlbumRigth > section {
+    width: 100%;
+  }
+
+  .pageAlbumLeft > div {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .pageAlbumLeft  h5 {
+    margin: 5px 0;
+  }
 }

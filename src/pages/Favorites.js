@@ -33,35 +33,34 @@ class Favorites extends React.Component {
 
   render() {
     const { favoritesSong, loading, verified } = this.state;
-    // if (loading) return <Loading />;
     return (
       <>
         <Header />
-        { loading ? <Loading /> : (
-          <>
+        <article className={ styles.favoritesPage }>
+          { loading ? <Loading /> : (
+            <>
             <h3 className={ styles.h3 }>Músicas Favoritas:</h3>
-            <article className={ styles.favoritesPage }>
-              {favoritesSong.map((item) => (
-                <section key={ item.trackId }>
-                  <div className={ styles.imgBox }>
-                    <img src={ item.artworkUrl100 } alt={ item.collectionName } />
-                  </div>
-                  <MusicCard
-                    key={ item.trackId }
-                    trackName={ item.trackName }
-                    previewUrl={ item.previewUrl }
-                    trackId={ item.trackId }
-                    musics={ item }
-                    id={ item.trackId }
-                    name={ item.trackName }
-                    checked={ verified }
-                    removeFavorite={ this.removeFavorite }
-                  />
-                </section>
-              ))}
-            </article>
-          </>
-        )}
+            {favoritesSong.map((item) => (
+              <section key={ item.trackId }>
+                <div className={ styles.imgBox }>
+                  <img src={ item.artworkUrl100 } alt={ item.collectionName } />
+                </div>
+                <MusicCard
+                  key={ item.trackId }
+                  trackName={ item.trackName }
+                  previewUrl={ item.previewUrl }
+                  trackId={ item.trackId }
+                  musics={ item }
+                  id={ item.trackId }
+                  name={ item.trackName }
+                  checked={ verified }
+                  removeFavorite={ this.removeFavorite }
+                />
+              </section>
+            ))}
+            </>
+          )}
+        </article>
       </>
     );
   }

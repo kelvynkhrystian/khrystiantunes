@@ -40,34 +40,32 @@ class MusicCard extends React.Component {
   render() {
     const { loading, verified } = this.state;
     const { trackName, previewUrl, trackId } = this.props;
-    if (loading) return <Loading />;
     return (
-      <section>
-        <div>
-          <p>
-            { trackName }
-          </p>
-          <label htmlFor={ trackName } className={ styles.label }>
-            <i class="fas fa-heart"></i>
-            <input
-              type="checkbox"
-              id={ trackName }
-              name={ trackName }
-              data-testid={ `checkbox-music-${trackId}` }
-              onChange={ this.handleCheckMusic }
-              checked={ verified }
-              className={ styles.input }
-            />
-          </label>
-        </div>
-        
-        <audio data-testid="audio-component" src={ previewUrl } controls>
-          <track kind="captions" />
-          O seu navegador não suporta o elemento
-          <code>audio</code>
-          .
-        </audio>
-        
+      <section className={ styles.sectionleft }>
+        { loading ? <Loading /> : (
+          <>
+            <div className={ styles.divleft }>
+              <p>{ trackName }</p>
+              <label htmlFor={ trackName } className={ verified? styles.label2 : styles.label }>
+                <input
+                  type="checkbox"
+                  id={ trackName }
+                  name={ trackName }
+                  data-testid={ `checkbox-music-${trackId}` }
+                  onChange={ this.handleCheckMusic }
+                  checked={ verified }
+                  className={ styles.input }
+                />
+                <i className="fas fa-heart"></i>
+              </label>
+            </div>
+
+            <audio data-testid="audio-component" src={ previewUrl } controls className={ styles.audio }>
+              <track kind="captions" />
+              Seu navegador não suporta o elemento <code>audio</code>.
+            </audio>
+          </>
+        )}
       </section>
     );
   }

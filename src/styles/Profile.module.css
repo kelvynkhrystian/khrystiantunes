@@ -14,14 +14,14 @@
   height: 400px;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 50px;
   width: 70%;
 }
 
 .profilePage > .profileBox > img {
-  border: 3px solid #023031;
+  /* border: 3px solid #023031; */
   border-radius: 10px;
-  width: 70%;
+  width: 80%;
 }
 
 .profilePage > .profileBox > p {
@@ -49,6 +49,7 @@
 
   .profilePage > .profileBox {
     height: 425px;
+    margin-top: 25px;
     width: 30%;
   }
 

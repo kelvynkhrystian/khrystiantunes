@@ -2,7 +2,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center ;
+  justify-content: flex-start ;
+  height: 100vh;
   width: 100%;
 }
 
@@ -11,9 +12,10 @@
   border-radius: 5px;
   box-shadow: 5px 5px 5px 5px rgb(190, 190, 190);
   display: flex;
-  justify-content: space-around;
+  height: 100px;
+  justify-content: space-between;
   margin-bottom: 15px;
-  width: 80%;
+  width: 90%;
 }
 
 .h3 {
@@ -24,25 +26,30 @@
   width: 100%;
 }
 
-.favoritesPage  img{
+.imgBox > img{
   border-radius: 5px;
-  width: 85%;
-}
-
-.favoritesPage  p{
-  padding: 20px 10px;
+  width: 100%;
 }
 
 .imgBox  {
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin: 10px;
+  width: 25%;
+}
+
+.favoritesPage > section > section {
+  width: 75%;
+  /* height: 100%; */
+  /* background-color: #023031; */
 }
 
 .favoritesPage > section > section > div{
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
   width: 90%;
 }
 

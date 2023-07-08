@@ -1,9 +1,19 @@
 /* // não pode usar hifen, use camelCase ou underline */
 .loading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   height: 100%;
   width: 100%;
 }
 
 .img {
-  width: 1em;
+  width: 15%;
+}
+
+@media only screen and (min-width: 601px) {
+
+  .img {
+    width: 3%;
+  }
 }
