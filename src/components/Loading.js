@@ -6,9 +6,9 @@ import Load from '../images/loading.gif';
 class Carregando extends React.Component {
   render() {
     return (
-      <section className={ styles.loading }>
+      <article className={ styles.loading }>
         <img src={ Load } alt="loading gif" className={ styles.img } />
-      </section>
+      </article>
     );
   }
 }

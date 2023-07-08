@@ -30,6 +30,14 @@
   width: 100%;
 }
 
+.pageAlbumRigth > article {
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px rgb(190, 190, 190);
+  height: 100px;
+  margin-bottom: 15px;
+  width: 90%;
+}
+
 .pageAlbumRigth > section {
   align-items: center;
   display: flex;
