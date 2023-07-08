@@ -43,26 +43,30 @@ class MusicCard extends React.Component {
     if (loading) return <Loading />;
     return (
       <section className={ styles.sectionleft }>
-        <div className={ styles.divleft }>
-          <p>{ trackName }</p>
-          <label htmlFor={ trackName } className={ styles.label }>
-            <input
-              type="checkbox"
-              id={ trackName }
-              name={ trackName }
-              data-testid={ `checkbox-music-${trackId}` }
-              onChange={ this.handleCheckMusic }
-              checked={ verified }
-              className={ styles.input }
-            />
-            <i className="fas fa-heart"></i>
-          </label>
-        </div>
+        { loading ? <Loading /> : (
+          <>
+            <div className={ styles.divleft }>
+              <p>{ trackName }</p>
+              <label htmlFor={ trackName } className={ verified? styles.label2 : styles.label }>
+                <input
+                  type="checkbox"
+                  id={ trackName }
+                  name={ trackName }
+                  data-testid={ `checkbox-music-${trackId}` }
+                  onChange={ this.handleCheckMusic }
+                  checked={ verified }
+                  className={ styles.input }
+                />
+                <i className="fas fa-heart"></i>
+              </label>
+            </div>
 
-        <audio data-testid="audio-component" src={ previewUrl } controls className={ styles.audio }>
-          <track kind="captions" />
-          Seu navegador não suporta o elemento <code>audio</code>.
-        </audio>
+            <audio data-testid="audio-component" src={ previewUrl } controls className={ styles.audio }>
+              <track kind="captions" />
+              Seu navegador não suporta o elemento <code>audio</code>.
+            </audio>
+          </>
+        )}
       </section>
     );
   }
