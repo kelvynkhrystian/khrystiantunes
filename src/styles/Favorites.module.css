@@ -7,6 +7,15 @@
   width: 100%;
 }
 
+.favoritesPage2 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start ;
+  height: 100vh;
+  width: 100%;
+}
+
 .favoritesPage > section {
   align-items: center;
   border-radius: 5px;
@@ -20,9 +29,9 @@
 
 .h3 {
   color: #023031;
-  text-align: center;
   font-size: x-large;
   margin: 20px 0;
+  text-align: center;
   width: 100%;
 }
 
@@ -41,8 +50,6 @@
 
 .favoritesPage > section > section {
   width: 75%;
-  /* height: 100%; */
-  /* background-color: #023031; */
 }
 
 .favoritesPage > section > section > div{
@@ -57,13 +64,18 @@
 
   .favoritesPage {
     flex-direction: row;
-    
+    height: 100%;
+  }
+
+  .favoritesPage2 {
+    flex-direction: row;
+    height: 100vh;
   }
 
   .h3 {
-    text-align: center;
     font-size: x-large;
     margin: 20px 0;
+    text-align: center;
   }
 
   .favoritesPage {
@@ -73,6 +85,11 @@
 
   .favoritesPage > section {
    width: 30%;
+  }
+
+  .imgBox > img{
+    border-radius: 5px;
+    width: 85%;
   }
 }
 

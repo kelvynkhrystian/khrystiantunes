@@ -59,7 +59,6 @@ class MusicCard extends React.Component {
                 <i className="fas fa-heart"></i>
               </label>
             </div>
-
             <audio data-testid="audio-component" src={ previewUrl } controls className={ styles.audio }>
               <track kind="captions" />
               Seu navegador não suporta o elemento <code>audio</code>.

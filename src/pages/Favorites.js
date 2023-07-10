@@ -36,7 +36,7 @@ class Favorites extends React.Component {
     return (
       <>
         <Header />
-        <article className={ styles.favoritesPage }>
+        <article className={ loading ? styles.favoritesPage2 : styles.favoritesPage }>
           { loading ? <Loading /> : (
             <>
             <h3 className={ styles.h3 }>Músicas Favoritas:</h3>

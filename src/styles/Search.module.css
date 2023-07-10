@@ -23,8 +23,8 @@
 }
 
 .searchInput:focus {
-  outline: 2.5px solid #023031;
   color: #023031;
+  outline: 2.5px solid #023031;
 }
 
 .searchButton {
@@ -129,8 +129,8 @@
   }
 
   .searchInput {
-    width: 75%;
     padding: 0 10px;
+    width: 75%;
   }
 
   .renderList {

@@ -19,7 +19,6 @@
 }
 
 .profilePage > .profileBox > img {
-  /* border: 3px solid #023031; */
   border-radius: 10px;
   width: 80%;
 }
@@ -41,8 +40,8 @@
   background-color: #023031;
   border-radius: 10px;
   color: #fff;
-  text-align: center;
   padding: 10px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 601px) {

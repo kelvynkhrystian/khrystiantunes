@@ -7,8 +7,8 @@
 }
 
 .label i {
-  font-size: 20px;
   color: rgb(156, 151, 143);
+  font-size: 20px;
 }
 
 .label2 {
@@ -19,8 +19,6 @@
   font-size: 20px;
   color: rgb(231, 47, 47);
 }
-
-
 
 .audio {
   border-radius: 0;

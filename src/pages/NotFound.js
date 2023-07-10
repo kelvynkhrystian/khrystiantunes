@@ -15,7 +15,6 @@ class NotFound extends React.Component {
             <p>procurando não foi encontrada.</p>
           </div>
         </section>
-        
       </article>
     );
   }

@@ -1,8 +1,8 @@
 .edit {
   align-items: center;
   display: flex;
-  justify-content: center;
   height: 100%;
+  justify-content: center;
   width: 100%;
 }
 
@@ -32,20 +32,20 @@
 }
 
 .editBox > div > textarea {
-  border-radius: 5px;
-  margin-top: 10px;
   border: #023031 2px solid;
+  border-radius: 5px;
   font-size: large;
+  margin-top: 10px;
   padding: 5px;
   width: 100%;
 }
 
 .editBox > button {
+  align-self: center;
   align-items: center;
   background-color: rgb(73, 73, 233);
   border-radius: 5px;
   color: white;
-  align-self: center;
   margin: 20px 0;
   padding: 10px 0;
   width: 90%;
