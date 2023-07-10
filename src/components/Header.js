@@ -33,9 +33,7 @@ class Header extends React.Component {
             <p className={ styles.nameUser }>
               Olá, 
               <span data-testid="header-user-name"> 
-                {/* ajeitar css do Loading  */}
                 { !userName.name && <Loading /> }
-                {/* css bold? ou deixa assim igual o da trybe */}
                 { userName.name }
               </span>
             </p>

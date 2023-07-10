@@ -33,7 +33,6 @@ class Favorites extends React.Component {
 
   render() {
     const { favoritesSong, loading, verified } = this.state;
-    // if (loading) return <Loading />;
     return (
       <>
         <Header />

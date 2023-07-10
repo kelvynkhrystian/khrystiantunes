@@ -34,16 +34,8 @@ class Search extends React.Component {
     });
   }
 
-  // Loading = () => {
-  //   this.setState({
-  //     carregando: true,
-  //   });
-  // }
-
   Pesquisar = async () => {
-    // console.log('chamou a fun');
     const { valueSearch } = this.state;
-    // this.Loading();
     this.setState({
       carregando: true,
     });
@@ -57,10 +49,7 @@ class Search extends React.Component {
   }
 
   render() {
-    const { buttonSearch, valueSearch, api, listSearch,
-      pesquisou, carregando } = this.state;
-    // listSearch
-    // const api = searchAlbumsAPI;
+    const { buttonSearch, valueSearch, api, listSearch, pesquisou, carregando } = this.state;
     return (
       <>
         <Header />

@@ -17,7 +17,6 @@ class ProfileEdit extends React.Component {
 
   async componentDidMount() {
     const info = await getUser();
-    // console.log(info);
     this.checkInfo(info);
     this.setState({
       infoUser: info,
@@ -58,7 +57,6 @@ class ProfileEdit extends React.Component {
 
   render() {
     const { infoUser, loading, redirecionar, disable } = this.state;
-    // console.log(infoUser);
     return (
       <main>
         <Header />

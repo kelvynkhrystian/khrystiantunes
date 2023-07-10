@@ -67,7 +67,6 @@ class MusicCard extends React.Component {
           <code>audio</code>
           .
         </audio>
-        
       </section>
     );
   }
