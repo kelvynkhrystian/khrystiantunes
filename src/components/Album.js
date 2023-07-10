@@ -34,7 +34,6 @@ class Album extends React.Component {
     const { musicList, loading, verified } = this.state;
     return (
       <>
-        
         <Header />
         { loading ? <Loading /> : (
           <article className={ styles.pageAlbum }>

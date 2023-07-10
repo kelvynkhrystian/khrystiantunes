@@ -31,11 +31,9 @@ class Header extends React.Component {
           <div className={ styles.headerUser }>
             <img src={ User } alt="LogoUser" className={ styles.imgUser } />
             <p className={ styles.nameUser }>
-              Olá, 
+              Olá,
               <span data-testid="header-user-name"> 
-                {/* ajeitar css do Loading  */}
                 { !userName.name && <Loading /> }
-                {/* css bold? ou deixa assim igual o da trybe */}
                 { userName.name }
               </span>
             </p>
