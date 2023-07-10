@@ -42,9 +42,9 @@ KhrystianTunes, uma aplicação capaz de reproduzir músicas das mais variadas b
 ## Link do projeto
 Você pode acessar o projeto online no link abaixo:
 
-![Alt text](../../print/Captura%20de%20tela_2023-07-10_10-37-16.png)
+### https://khrystian-tunes.vercel.app/
 
-https://khrystian-tunes.vercel.app/
+![Captura de tela_2023-07-10_10-37-16](https://github.com/kelvynkhrystian/khrystianTunes/assets/94154348/a9261e72-460e-437d-ac40-1956db8136f9)
 
 ---
 
