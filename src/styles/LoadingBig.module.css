@@ -1,12 +1,12 @@
 /* // não pode usar hifen, use camelCase ou underline */
 .loading {
-  display: flex;
   align-items: center;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  height: 100%;
   justify-content: center;
   position: fixed;
-  background-color: rgb(255, 255, 255);
   top: 0%;
-  height: 100%;
   width: 100%;
 }
 
