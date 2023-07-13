@@ -12,21 +12,27 @@ import NotFound from './pages/NotFound';
 
 // import '@fortawesome/fontawesome-free/css/all.css';
 
+const routes = [
+  { path: '/', element: <Login /> },
+  { path: '/search', element: <Search /> },
+  { path: '/album/:id', element: <Album /> },
+  { path: '/favorites', element: <Favorites /> },
+  { path: '/profile/edit', element: <ProfileEdit /> },
+  { path: '/profile', element: <Profile /> },
+  { path: '*', element: <NotFound /> }
+];
+
 const App = () => {
   return (
     <main>
       <Routes>
-        {/* <Route path="/header" element={ <Header /> } /> */}
-        <Route path="/" element={ <Login /> } />
-        <Route path="/search" element={ <Search /> } />
-        <Route path="/album/:id" element={ <Album /> } />
-        <Route path="/favorites" element={ <Favorites /> } />
-        <Route path="/profile/edit" element={ <ProfileEdit /> } />
-        <Route path="/profile" element={ <Profile /> } />
-        <Route path="*" element={ <NotFound /> } />
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
       </Routes>
     </main>
   );
-}
+};
 
 export default App;
+
