@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Login from './pages/Login';
 import Search from './pages/Search';
@@ -8,29 +8,25 @@ import Favorites from './pages/Favorites';
 import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
 import NotFound from './pages/NotFound';
-import Header from './components/Header';
+// import Header from './components/Header';
 
-import '@fortawesome/fontawesome-free/css/all.css';
+// import '@fortawesome/fontawesome-free/css/all.css';
 
-class App extends React.Component {
-  render() {
-    return (
-      <main>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/header" component={ Header } />
-            <Route exact path="/" component={ Login } />
-            <Route exact path="/search" component={ Search } />
-            <Route exact path="/album/:id" component={ Album } />
-            <Route exact path="/favorites" component={ Favorites } />
-            <Route exact path="/profile/edit" component={ ProfileEdit } />
-            <Route exact path="/profile" component={ Profile } />
-            <Route path="*" component={ NotFound } />
-          </Switch>
-        </BrowserRouter>
-      </main>
-    );
-  }
+const App = () => {
+  return (
+    <main>
+      <Routes>
+        {/* <Route path="/header" element={ <Header /> } /> */}
+        <Route path="/" element={ <Login /> } />
+        <Route path="/search" element={ <Search /> } />
+        <Route path="/album/:id" element={ <Album /> } />
+        <Route path="/favorites" element={ <Favorites /> } />
+        <Route path="/profile/edit" element={ <ProfileEdit /> } />
+        <Route path="/profile" element={ <Profile /> } />
+        <Route path="*" element={ <NotFound /> } />
+      </Routes>
+    </main>
+  );
 }
 
 export default App;

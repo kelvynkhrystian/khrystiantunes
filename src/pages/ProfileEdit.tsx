@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const ProfileEdit = () => {
+const ProfileEdit = () => {
   return (
     <div>ProfileEdit</div>
   )
 }
+
+export default ProfileEdit;
