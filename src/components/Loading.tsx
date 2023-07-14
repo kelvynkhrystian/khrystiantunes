@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 export const Loading = () => {
   return (
-    <div>Loading</div>
-  )
-}
+    <div>
+      Loading
+      <h1>ok</h1>
+    </div>
+  );
+};

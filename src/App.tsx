@@ -19,7 +19,7 @@ const routes = [
   { path: '/favorites', element: <Favorites /> },
   { path: '/profile/edit', element: <ProfileEdit /> },
   { path: '/profile', element: <Profile /> },
-  { path: '*', element: <NotFound /> }
+  { path: '*', element: <NotFound /> },
 ];
 
 const App = () => {
@@ -35,4 +35,3 @@ const App = () => {
 };
 
 export default App;
-
