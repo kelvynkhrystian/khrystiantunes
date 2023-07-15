@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: -apple-system, 'Open Sans', sans-serif;
+    font-family: -apple-system, monospace, 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
     text-decoration: none;

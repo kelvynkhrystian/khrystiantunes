@@ -1,11 +1,11 @@
 import React from 'react';
+import { LoginButton, LoginPage } from '../styles/PageLoginStyles';
 
 const Login = () => {
   return (
-    <article>
-      {/* <img src={ Logo } alt="LogoKhrystianTunes" /> */}
+    <LoginPage>
       <img
-        src="https://khrystian-tunes-ouafcs5fv-kelvynkhrystian.vercel.app/"
+        src="https://khrystian-tunes-ouafcs5fv-kelvynkhrystian.vercel.app/static/media/logoGreen.786ce55f.png"
         alt="Logo"
       />
       <section>
@@ -17,18 +17,18 @@ const Login = () => {
           // value={ value }
           // onChange={ this.InputChange }
         />
-        <button
+        <LoginButton
           type="submit"
           // disabled={ button }
           // className={ styles.loginButton }
           // onClick={ this.loginButton }
         >
           Entrar
-        </button>
+        </LoginButton>
         {/* { carregando && <Loading />}
           { redirecionar && <Redirect to="/search" />} */}
       </section>
-    </article>
+    </LoginPage>
   );
 };
 
