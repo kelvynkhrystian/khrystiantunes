@@ -1,23 +1,29 @@
 import React from 'react';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
+import {
+  SearchPage,
+  SearchInput,
+  SearchList,
+  SearchButton,
+} from '../styles/pages/SeachStyles';
 
 const Search = () => {
   return (
     <>
       <Header />
-      <div data-testid="page-search" className={'search'}>
-        <div className={'searchUp'}>
+      <SearchPage data-testid="page-search" className={'search'}>
+        <SearchInput className={'searchUp'}>
           <input
             type="text"
             className={'searchInput'}
             data-testid="search-artist-input"
             name="valueSearch"
-            value={'valueSearch'}
+            // value={'valueSearch'}
             // onChange={this.InputChangeSearch}
-            placeholder="Digite o nome de um artista ou banda"
+            placeholder="Busque um artista ou banda"
           />
-          <button
+          <SearchButton
             type="button"
             className={'searchButton'}
             data-testid="search-artist-button"
@@ -25,10 +31,9 @@ const Search = () => {
             // onClick={this.Pesquisar}
           >
             Pesquisar
-          </button>
-        </div>
-        <div className={'renderList'}>
-          {'carregando' && <Loading />}
+          </SearchButton>
+        </SearchInput>
+        <SearchList className={'renderList'}>
           {'listSearch' ? (
             <section className={'renderizou'}>
               <div>
@@ -61,8 +66,9 @@ const Search = () => {
               </div> */}
             </section>
           ) : null}
-        </div>
-      </div>
+          {'carregando' && <Loading />}
+        </SearchList>
+      </SearchPage>
     </>
   );
 };

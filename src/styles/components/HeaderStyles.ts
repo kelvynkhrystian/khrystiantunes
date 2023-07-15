@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-// Carregamento
+// Componente Header
 
 export const HeaderStyles = styled.header`
   align-items: center;
@@ -53,11 +53,35 @@ export const HeaderStyles = styled.header`
     display: flex;
     justify-content: space-around;
     width: 100%;
+
+    a {
+      align-items: center;
+      background-color: #f0f2f5;
+      box-shadow: 2px 2px 2px 2px rgb(190, 190, 190);
+      border-radius: 5px;
+      color: #1a8a61;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 10px 2px;
+      text-decoration: none;
+      transition: background-color 0.5s ease;
+      width: 30%;
+    }
+
+    a:active {
+      scale: 0.95;
+    }
+
+    a:hover {
+      background-color: #1a8a61;
+      color: #f0f2f5;
+    }
   }
 
   @media only screen and (min-width: 601px) {
     section {
-      justify-content: center;
+      /* justify-content: center; */
     }
   }
 `;
