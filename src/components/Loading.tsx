@@ -1,10 +1,15 @@
 import React from 'react';
+import { LoadingStyles } from '../styles/components/LoadingStyles';
 
-export const Loading = () => {
+const Loading = () => {
   return (
-    <div>
-      Loading
-      <h1>ok</h1>
-    </div>
+    <LoadingStyles>
+      <img
+        src="https://github.com/kelvynkhrystian/khrystiantunes/blob/main/src/images/loading.gif?raw=true"
+        alt="loading gif"
+      />
+    </LoadingStyles>
   );
 };
+
+export default Loading;
