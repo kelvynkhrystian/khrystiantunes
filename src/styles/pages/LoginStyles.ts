@@ -18,7 +18,7 @@ export const LoginPage = styled.article`
     box-shadow: 5px 5px 5px 5px rgb(190, 190, 190);
     display: flex;
     flex-direction: column;
-    height: 30%;
+    height: 20%;
     justify-content: center;
     width: 80%;
   }
@@ -39,14 +39,18 @@ export const LoginPage = styled.article`
   }
 
   img {
-    margin-bottom: 50px;
-    width: 250px;
+    margin-bottom: 20px;
+    width: 70%;
   }
 
   @media only screen and (min-width: 601px) {
     section {
-      height: 30%;
+      height: 20%;
       width: 25%;
+    }
+
+    img {
+      width: 20%;
     }
   }
 `;
