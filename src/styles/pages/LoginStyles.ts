@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from './ButtonsStyles';
+import { Button } from '../ButtonsStyles';
 
 // Página principal de login
 

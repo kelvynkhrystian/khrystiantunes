@@ -1,5 +1,5 @@
 import React from 'react';
-import { LoginButton, LoginPage } from '../styles/PageLoginStyles';
+import { LoginButton, LoginPage } from '../styles/pages/LoginStyles';
 
 const Login = () => {
   return (
