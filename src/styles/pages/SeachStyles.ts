@@ -35,6 +35,12 @@ export const SearchInput = styled.section`
   }
 
   @media only screen and (min-width: 601px) {
+    flex-direction: row;
+    justify-content: space-around;
+
+    input {
+      width: 70%;
+    }
   }
 `;
 
@@ -61,4 +67,10 @@ export const SearchButton = styled.button`
   padding: 10px;
   margin-top: 10px;
   width: 100%;
+
+  @media only screen and (min-width: 601px) {
+    height: 100%;
+    margin: 0;
+    width: 20%;
+  }
 `;
