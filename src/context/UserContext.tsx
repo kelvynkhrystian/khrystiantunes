@@ -9,9 +9,10 @@ interface User {
 
 const emptyUser: User = {
   name: '',
-  email: '',
-  image: '',
-  description: '',
+  email: 'khrystian.dev@hotmail.com',
+  image:
+    'https://kelvyn-khrystian.vercel.app/static/media/2.e4f51920227c1e103dfd.jpg',
+  description: 'Programador FrontEnd',
 };
 
 interface UserContextProps {
