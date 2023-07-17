@@ -51,8 +51,10 @@ export const SearchList = styled.section`
   justify-content: center;
   /* background-color: aqua; */
   width: 90%;
+  text-align: center;
 
   > section {
+    align-items: center;
     text-align: center;
     width: 100%;
 
@@ -62,9 +64,10 @@ export const SearchList = styled.section`
   }
 
   article {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
   }
 
@@ -99,10 +102,6 @@ export const AlbumCard = styled.section`
 
   a:active {
     scale: 0.95;
-  }
-
-  article {
-    background-color: red;
   }
 
   @media only screen and (min-width: 601px) {

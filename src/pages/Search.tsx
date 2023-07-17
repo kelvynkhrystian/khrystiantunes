@@ -18,12 +18,11 @@ const Search = () => {
   const [button, setbutton] = useState(true);
   const [list, setList] = useState(false);
   const [api, setApi] = useState<SearchResult[]>([]);
+  const [searching, setSearching] = useState('');
 
   const InputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
-    // status button
     value.length < 2 || value.length > 15 ? setbutton(true) : setbutton(false);
-    // salvando o valor do input atual
     setSearchText(value);
   };
 
@@ -37,11 +36,13 @@ const Search = () => {
     }
   };
 
-  const SearchClick = async () => {
+  const SearchClick = () => {
     setLoading(true);
     setList(true);
-    await SearchApi(searchText);
+    SearchApi(searchText);
     setLoading(false);
+    setSearching(searchText);
+    setSearchText('');
   };
 
   return (
@@ -51,6 +52,7 @@ const Search = () => {
         <SearchInput>
           <input
             type="text"
+            value={searchText}
             onChange={InputChange}
             placeholder="Busque um artista ou banda"
           />
@@ -58,14 +60,13 @@ const Search = () => {
             Pesquisar
           </SearchButton>
         </SearchInput>
-        <SearchList className={'renderList'}>
+        <SearchList>
           {list ? (
-            <section className={'renderizou'}>
+            <section>
               <p>
-                Resultado de álbuns de: <strong>{` ${searchText}`}</strong>
+                Resultado de álbuns de: <strong>{` ${searching}`}</strong>
               </p>
-
-              <article className={'renderizouLista'}>
+              <article>
                 {api.length > 0 ? (
                   api.map((album) => (
                     <AlbumCard key={album.collectionId}>

@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Login from './pages/Login';
 import Search from './pages/Search';
-import Album from './components/Album';
+import Album from './pages/Album';
 import Favorites from './pages/Favorites';
 import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
