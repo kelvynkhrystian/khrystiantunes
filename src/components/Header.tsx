@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../context/UserContext';
+
 import Loading from './Loading';
 import { HeaderStyles } from '../styles/components/HeaderStyles';
 
 const Header = () => {
+  const { user } = useContext(UserContext);
+
+  // console.log('user', user);
+  // console.log('Dados do usuário:', user.name);
+
   return (
     <HeaderStyles data-testid="header-component" className={'styles.header'}>
       <section className={'styles.headerTop'}>
@@ -18,12 +25,7 @@ const Header = () => {
             className={'styles.imgUser'}
           />
           <p className={'styles.nameUser'}>
-            Olá,
-            <span data-testid="header-user-name">
-              {/* {!userName.name && <Loading />}
-              {userName.name} */}
-              <Loading />
-            </span>
+            Olá, {!user.name ? <Loading /> : user.name}
           </p>
         </div>
       </section>

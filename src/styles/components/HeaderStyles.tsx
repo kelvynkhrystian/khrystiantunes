@@ -14,6 +14,7 @@ export const HeaderStyles = styled.header`
     background-color: #023031;
     display: flex;
     flex-direction: row;
+    height: 75px;
     justify-content: space-between;
     width: 100%;
   }
