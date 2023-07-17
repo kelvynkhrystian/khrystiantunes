@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Button } from '../ButtonsStyles';
 
-export const ProfilePage = styled.article`
+export const ProfileEditPage = styled.article`
   align-items: center;
   display: flex;
   flex-direction: column;

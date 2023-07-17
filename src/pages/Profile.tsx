@@ -8,9 +8,11 @@ import { ProfilePage } from '../styles/pages/ProfileStyles';
 
 const Profile = () => {
   const { user } = useContext(UserContext);
-  const [loading, setloading] = useState(false);
+  const [loading, setloading] = useState(true);
 
-  console.log(user);
+  setTimeout(() => {
+    setloading(false);
+  }, 1000);
 
   return (
     <>
