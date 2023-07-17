@@ -6,7 +6,9 @@ export const HeaderStyles = styled.header`
   align-items: center;
   display: flex;
   flex-direction: column;
+  font-size: bold;
   justify-content: flex-start;
+  margin-bottom: 50px;
   width: 100%;
 
   section {

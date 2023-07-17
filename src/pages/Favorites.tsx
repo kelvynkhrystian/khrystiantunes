@@ -1,7 +1,13 @@
 import React from 'react';
+import Header from '../components/Header';
 
 const Favorites = () => {
-  return <div>Favorites</div>;
+  return (
+    <>
+      <Header />
+      <article></article>
+    </>
+  );
 };
 
 export default Favorites;

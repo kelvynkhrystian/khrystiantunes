@@ -18,7 +18,7 @@ export const SearchInput = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 50px 0;
+  margin-bottom: 50px;
   width: 90%;
 
   input {

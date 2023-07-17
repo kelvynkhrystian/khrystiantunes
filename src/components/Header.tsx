@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 
@@ -7,6 +7,15 @@ import { HeaderStyles } from '../styles/components/HeaderStyles';
 
 const Header = () => {
   const { user } = useContext(UserContext);
+  const [nameUser, setNameUser] = useState('');
+
+  // simulando um carregamento
+
+  useEffect(() => {
+    setTimeout(() => {
+      setNameUser(user.name ? user.name : '');
+    }, 1000);
+  }, []);
 
   return (
     <HeaderStyles>
@@ -20,7 +29,8 @@ const Header = () => {
             src="https://github.com/kelvynkhrystian/khrystiantunes/blob/main/src/images/user.png?raw=true"
             alt="LogoUser"
           />
-          <p>Olá, {!user.name ? <Loading /> : user.name}</p>
+          {/* <p>Olá, {!user.name ? <Loading /> : user.name}</p> */}
+          <p>Olá, {!nameUser ? <Loading /> : user.name}</p>
         </div>
       </section>
       <nav>

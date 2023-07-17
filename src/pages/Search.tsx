@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import {
@@ -9,6 +9,16 @@ import {
 } from '../styles/pages/SeachStyles';
 
 const Search = () => {
+  const [search, setSearch] = useState('');
+  const [button, setbutton] = useState(true);
+
+  const InputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    console.log(value);
+    value.length <= 2 ? setbutton(true) : setbutton(false);
+    setSearch(value);
+  };
+
   return (
     <>
       <Header />
@@ -20,14 +30,12 @@ const Search = () => {
             data-testid="search-artist-input"
             name="valueSearch"
             // value={'valueSearch'}
-            // onChange={this.InputChangeSearch}
+            onChange={InputChange}
             placeholder="Busque um artista ou banda"
           />
           <SearchButton
             type="button"
-            className={'searchButton'}
-            data-testid="search-artist-button"
-            // disabled={'buttonSearch'}
+            disabled={button}
             // onClick={this.Pesquisar}
           >
             Pesquisar
