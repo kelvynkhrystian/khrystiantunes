@@ -18,7 +18,7 @@ export const SearchInput = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   width: 90%;
 
   input {
@@ -36,22 +36,74 @@ export const SearchInput = styled.section`
 
   @media only screen and (min-width: 601px) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    width: 100%;
 
     input {
-      width: 70%;
+      width: 72%;
     }
   }
 `;
 
 export const SearchList = styled.section`
   align-items: center;
-  /* border: #023031 3px solid; */
-  border-radius: 10px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  /* background-color: aqua; */
   width: 90%;
+
+  > section {
+    text-align: center;
+    width: 100%;
+
+    > p {
+      margin-bottom: 25px;
+    }
+  }
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 601px) {
+  }
+`;
+
+export const AlbumCard = styled.section`
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 5px rgb(190, 190, 190);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 300px;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 10px;
+  width: 180px;
+
+  a {
+    background-color: #023031;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+    padding: 10px;
+    margin-top: 10px;
+    width: 90%;
+  }
+
+  a:active {
+    scale: 0.95;
+  }
+
+  article {
+    background-color: red;
+  }
 
   @media only screen and (min-width: 601px) {
   }
@@ -71,6 +123,6 @@ export const SearchButton = styled.button`
   @media only screen and (min-width: 601px) {
     height: 100%;
     margin: 0;
-    width: 20%;
+    width: 22%;
   }
 `;

@@ -21,7 +21,7 @@ const Login = () => {
 
   const InputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
-    value.length <= 2 || value.length > 9 ? setbutton(true) : setbutton(false);
+    value.length <= 2 || value.length > 11 ? setbutton(true) : setbutton(false);
     setname(value);
   };
 

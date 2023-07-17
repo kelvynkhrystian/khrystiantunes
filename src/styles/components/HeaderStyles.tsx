@@ -8,7 +8,7 @@ export const HeaderStyles = styled.header`
   flex-direction: column;
   font-size: bold;
   justify-content: flex-start;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   width: 100%;
 
   section {
