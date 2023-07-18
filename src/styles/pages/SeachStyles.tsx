@@ -50,7 +50,7 @@ export const SearchList = styled.section`
   display: flex;
   justify-content: center;
   /* background-color: aqua; */
-  width: 90%;
+  width: 95%;
   text-align: center;
 
   > section {
@@ -86,7 +86,11 @@ export const AlbumCard = styled.section`
   justify-content: space-between;
   margin: 5px;
   padding: 10px;
-  width: 180px;
+  width: 45%;
+
+  img {
+    border-radius: 10px;
+  }
 
   a {
     background-color: #023031;
@@ -105,6 +109,7 @@ export const AlbumCard = styled.section`
   }
 
   @media only screen and (min-width: 601px) {
+    width: 200px;
   }
 `;
 
