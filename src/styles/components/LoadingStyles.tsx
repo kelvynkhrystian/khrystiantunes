@@ -23,6 +23,7 @@ export const LoadingStyles = styled.article`
 // carregamento de tela completa
 
 export const LoadingFullStyles = styled(LoadingStyles)`
+  align-items: center;
   height: 100vh;
   z-index: 999;
 `;

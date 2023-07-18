@@ -1,18 +1,17 @@
 import React, { createContext, useEffect, useState } from 'react';
 
-interface User {
+export interface User {
   name?: string;
   email?: string;
   image?: string;
   description?: string;
 }
 
-const emptyUser: User = {
+export const emptyUser: User = {
   name: '',
-  email: 'khrystian.dev@hotmail.com',
-  image:
-    'https://kelvyn-khrystian.vercel.app/static/media/2.e4f51920227c1e103dfd.jpg',
-  description: 'Programador FrontEnd',
+  email: '',
+  image: '',
+  description: '',
 };
 
 interface UserContextProps {
@@ -46,9 +45,15 @@ export const UserProvider = ({ children }: UserContextProviderProps) => {
     localStorage.setItem('user', JSON.stringify(updatedUser));
   };
 
+  // const clearUser = () => {
+  //   setUser(emptyUser);
+  //   localStorage.setItem('user', JSON.stringify(emptyUser));
+  // };
+
   const context = {
     user,
     updateUser,
+    // clearUser,
   };
 
   return (

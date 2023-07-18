@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Button } from '../ButtonsStyles';
 
 export const ProfilePage = styled.article`
   align-items: center;

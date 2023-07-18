@@ -20,6 +20,13 @@ const Search = () => {
   const [api, setApi] = useState<SearchResult[]>([]);
   const [searching, setSearching] = useState('');
 
+  const SimlateLoading = () => {
+    setTimeout(() => {
+      setList(true);
+      setLoading(false);
+    }, 500);
+  };
+
   const InputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     value.length < 2 || value.length > 15 ? setbutton(true) : setbutton(false);
@@ -36,11 +43,17 @@ const Search = () => {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter' && !button) {
+      SearchClick();
+    }
+  };
+
   const SearchClick = () => {
     setLoading(true);
-    setList(true);
+    setList(false);
+    SimlateLoading();
     SearchApi(searchText);
-    setLoading(false);
     setSearching(searchText);
     setSearchText('');
   };
@@ -55,12 +68,14 @@ const Search = () => {
             value={searchText}
             onChange={InputChange}
             placeholder="Busque um artista ou banda"
+            onKeyDown={handleKeyDown}
           />
           <SearchButton type="button" disabled={button} onClick={SearchClick}>
             Pesquisar
           </SearchButton>
         </SearchInput>
         <SearchList>
+          {loading && <Loading />}
           {list ? (
             <section>
               <p>
@@ -87,7 +102,6 @@ const Search = () => {
               </article>
             </section>
           ) : null}
-          {loading && <Loading />}
         </SearchList>
       </SearchPage>
     </>

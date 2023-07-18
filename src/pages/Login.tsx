@@ -25,6 +25,12 @@ const Login = () => {
     setname(value);
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter' && !button) {
+      LoginApp();
+    }
+  };
+
   const LoginApp = () => {
     setloading(true);
     updateUser({ name });
@@ -46,6 +52,7 @@ const Login = () => {
               type="text"
               placeholder="Digite o nome de novo usuário"
               onChange={InputChange}
+              onKeyDown={handleKeyDown}
             />
             <LoginButton type="submit" disabled={button} onClick={LoginApp}>
               Entrar

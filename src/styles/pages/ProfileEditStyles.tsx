@@ -10,46 +10,49 @@ export const ProfileEditPage = styled.article`
 
   section {
     align-items: center;
-    box-shadow: 5px 5px 5px 5px rgb(190, 190, 190);
+    box-shadow: 5px 5px 15px 5px rgb(190, 190, 190);
     border-radius: 10px;
     display: flex;
     height: 400px;
     justify-content: space-around;
     flex-direction: column;
     padding: 15px;
-    width: 80%;
-
-    img {
-      border-radius: 10px;
-      margin: 5px;
-      width: 200px;
-    }
+    width: 90%;
 
     div {
+      align-items: center;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       width: 100%;
     }
 
-    a {
-      align-items: center;
-      background-color: #023031;
+    input {
       border: none;
       border-radius: 5px;
-      color: white;
-      cursor: pointer;
-      font-size: large;
-      padding: 10px 5px;
-      text-align: center;
-      width: 45%;
+      box-shadow: 1px 1px 11px 1px rgb(190, 190, 190);
+      font-size: medium;
+      padding: 10px;
+      width: 65%;
     }
 
-    a:active {
-      scale: 0.95;
+    input:focus {
+      color: #023031;
+      outline: 2.5px solid #023031;
     }
 
-    a:nth-child(2) {
-      background-color: #b80808;
+    textarea {
+      border: none;
+      border-radius: 5px;
+      box-shadow: 1px 1px 11px 1px rgb(190, 190, 190);
+      font-size: medium;
+      outline: #023031;
+      padding: 10px;
+      width: 65%;
+    }
+
+    textarea:focus {
+      color: #023031;
+      outline: 2.5px solid #023031;
     }
   }
 
@@ -58,5 +61,22 @@ export const ProfileEditPage = styled.article`
       height: 420px;
       width: 30%;
     }
+  }
+`;
+
+// Botão da página de Search exportado do componente de botão base
+
+export const ProfileEditButton = styled.button`
+  ${Button}
+  background-color: #023031;
+  color: white;
+  font-size: large;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+
+  @media only screen and (min-width: 601px) {
+    margin: 0;
+    width: 100%;
   }
 `;

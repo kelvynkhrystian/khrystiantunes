@@ -7,12 +7,23 @@ import Loading from '../components/Loading';
 import { ProfilePage } from '../styles/pages/ProfileStyles';
 
 const Profile = () => {
-  const { user } = useContext(UserContext);
+  // const { user, clearUser } = useContext(UserContext);
+  const { user, updateUser } = useContext(UserContext);
   const [loading, setloading] = useState(true);
 
   setTimeout(() => {
     setloading(false);
   }, 1000);
+
+  // rever porque a função clear no context não funcionou
+  const Clear = () => {
+    updateUser({
+      name: '',
+      email: '',
+      image: '',
+      description: ',',
+    });
+  };
 
   return (
     <>
@@ -22,7 +33,6 @@ const Profile = () => {
           <Loading />
         ) : (
           <section>
-            {/* className={styles.profileBox} */}
             <img
               src={
                 user.image ||
@@ -35,7 +45,9 @@ const Profile = () => {
             <h4>{user.description}</h4>
             <div>
               <Link to="/profile/edit">Editar</Link>
-              <Link to="/">Sair</Link>
+              <Link to="/" onClick={Clear}>
+                Sair
+              </Link>
             </div>
           </section>
         )}
