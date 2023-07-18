@@ -16,7 +16,7 @@ const Login = () => {
     setTimeout(() => {
       navigate('/search');
       setloading(false);
-    }, 1000);
+    }, 2000);
   };
 
   const InputChange = (event: ChangeEvent<HTMLInputElement>) => {

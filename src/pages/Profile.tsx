@@ -36,7 +36,7 @@ const Profile = () => {
             <img
               src={
                 user.image ||
-                'https://cdn-icons-png.flaticon.com/512/74/74472.png'
+                'https://lordicon.com/icons/wired/outline/17-avatar-man-nodding.gif'
               }
               alt="user image"
             />

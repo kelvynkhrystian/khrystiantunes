@@ -13,17 +13,22 @@ export const ProfileEditPage = styled.article`
     box-shadow: 5px 5px 15px 5px rgb(190, 190, 190);
     border-radius: 10px;
     display: flex;
-    height: 400px;
+    height: 500px;
     justify-content: space-around;
     flex-direction: column;
     padding: 15px;
     width: 90%;
 
     div {
-      align-items: center;
+      align-items: flex-start;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       width: 100%;
+
+      h3 {
+        margin-bottom: 10px;
+      }
     }
 
     input {
@@ -32,7 +37,7 @@ export const ProfileEditPage = styled.article`
       box-shadow: 1px 1px 11px 1px rgb(190, 190, 190);
       font-size: medium;
       padding: 10px;
-      width: 65%;
+      width: 100%;
     }
 
     input:focus {
@@ -47,7 +52,7 @@ export const ProfileEditPage = styled.article`
       font-size: medium;
       outline: #023031;
       padding: 10px;
-      width: 65%;
+      width: 100%;
     }
 
     textarea:focus {
@@ -58,7 +63,7 @@ export const ProfileEditPage = styled.article`
 
   @media only screen and (min-width: 601px) {
     section {
-      height: 420px;
+      height: 450px;
       width: 30%;
     }
   }

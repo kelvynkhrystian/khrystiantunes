@@ -27,7 +27,7 @@ export const HeaderStyles = styled.header`
     color: #023031;
     display: flex;
     flex-direction: row;
-    height: 40px;
+    height: 45px;
     justify-content: center;
     margin-right: 20px;
     padding: 5px;
