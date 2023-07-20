@@ -85,9 +85,9 @@ const Search = () => {
                 {api.length > 0 ? (
                   api.map((album) => (
                     <AlbumCard key={album.collectionId}>
-                      <img src={album.artworkUrl100} />
-                      <p>{album.collectionName}</p>
-                      <h4>{album.artistName}</h4>
+                      <img src={album.artworkUrl100} alt="album" />
+                      <p>{album.collectionName.slice(0, 10)}</p>
+                      <h4>{album.artistName.slice(0, 10)}</h4>
                       <Link
                         key={album.collectionId}
                         to={`/album/${album.collectionId}`}

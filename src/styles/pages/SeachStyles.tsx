@@ -78,11 +78,11 @@ export const SearchList = styled.section`
 export const AlbumCard = styled.section`
   align-items: center;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px 5px rgb(190, 190, 190);
+  box-shadow: 3px 3px 7px 3px rgb(190, 190, 190);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 300px;
+  height: 290px;
   justify-content: space-between;
   margin: 5px;
   padding: 10px;
@@ -90,6 +90,7 @@ export const AlbumCard = styled.section`
 
   img {
     border-radius: 10px;
+    width: 140px;
   }
 
   a {
@@ -108,8 +109,12 @@ export const AlbumCard = styled.section`
     scale: 0.95;
   }
 
+  p {
+    width: 90%;
+  }
+
   @media only screen and (min-width: 601px) {
-    width: 200px;
+    width: 175px;
   }
 `;
 
