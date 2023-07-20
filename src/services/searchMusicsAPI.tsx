@@ -10,6 +10,11 @@ export interface SearchMusic {
   trackId?: number;
   trackName?: string;
   previewUrl?: string;
+  // linha a baixo complicada
+  checked?: boolean;
+  musics?: SearchMusic | undefined;
+  id?: number;
+  name?: string;
 }
 
 const getMusicsAPI = async (id: string | undefined) => {

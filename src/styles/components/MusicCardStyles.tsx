@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const CardMusic = styled.div`
   align-items: center;
-  /* background-color: red; */
   box-shadow: 5px 5px 15px 5px rgb(190, 190, 190);
   border-radius: 10px;
   display: flex;
@@ -20,30 +19,28 @@ export const CardMusic = styled.div`
     justify-content: space-between;
     width: 100%;
     padding: 0 10px;
-    /* background-color: red; */
+
+    input {
+      display: none;
+    }
+
+    label {
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .checkFalse {
+      color: #808080;
+    }
+
+    .checkTrue {
+      color: #ff0000;
+    }
   }
 
   audio {
     height: 40px;
-    /* margin-top: 10px; */
     width: 100%;
-  }
-
-  input {
-    display: none;
-  }
-
-  label {
-    cursor: pointer;
-  }
-
-  label i {
-    font-size: 20px;
-    color: gray;
-  }
-
-  input:checked + label i {
-    color: red;
   }
 
   @media only screen and (min-width: 601px) {

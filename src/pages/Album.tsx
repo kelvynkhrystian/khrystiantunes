@@ -12,12 +12,6 @@ const Album = () => {
   const [musics, setMusics] = useState<SearchMusic[]>([]);
   const { id } = useParams<string>();
 
-  const getAlbum = async () => {
-    const currentAlbum = await getMusicsAPI(id);
-    setAlbum(currentAlbum[0]);
-    setMusics(currentAlbum.slice(1));
-  };
-
   useEffect(() => {
     getAlbum();
     // console.log(musics);
@@ -26,6 +20,12 @@ const Album = () => {
   setTimeout(() => {
     setloading(false);
   }, 1000);
+
+  const getAlbum = async () => {
+    const currentAlbum = await getMusicsAPI(id);
+    setAlbum(currentAlbum[0]);
+    setMusics(currentAlbum.slice(1));
+  };
 
   return (
     <>
@@ -55,10 +55,9 @@ const Album = () => {
                       trackName={music.trackName}
                       previewUrl={music.previewUrl}
                       trackId={music.trackId}
-                      // musics={music}
-                      // id={music.trackId}
-                      // name={music.trackName}
-                      // checked={verified}
+                      musics={music}
+                      id={music.trackId}
+                      name={music.trackName}
                     />
                   )
                 )}

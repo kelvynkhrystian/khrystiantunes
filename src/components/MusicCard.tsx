@@ -1,17 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, ChangeEvent, useContext } from 'react';
 import Loading from '../components/Loading';
 import { CardMusic } from '../styles/components/MusicCardStyles';
 import { SearchMusic } from '../services/searchMusicsAPI';
+import { FavoritesContext } from '../context/FavoritesContext';
 
 const MusicCard = (props: SearchMusic) => {
-  const { trackName, previewUrl } = props;
-  console.log(props);
+  const { trackName, previewUrl, musics } = props;
+  const { getFavorites, addFavorites, remFavorites } =
+    useContext(FavoritesContext);
+  const [loading, setLoading] = useState(true);
+  const [checked, setChecked] = useState(false);
 
-  const [loading, setloading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
-  setTimeout(() => {
-    setloading(false);
-  }, 1000);
+  const handleCheckMusic = (event: ChangeEvent<HTMLInputElement>) => {
+    const check = event.target.checked;
+    console.log('favoritos');
+
+    //
+
+    if (check) {
+      addFavorites(musics ? musics : {});
+      setChecked(true);
+      console.log(getFavorites());
+    } else {
+      remFavorites(musics ? musics : {});
+      setChecked(false);
+      console.log(getFavorites());
+    }
+  };
 
   return (
     <>
@@ -22,15 +43,16 @@ const MusicCard = (props: SearchMusic) => {
           <>
             <div>
               <h4>{trackName}</h4>
-              <label htmlFor={trackName}>
+              <label
+                htmlFor={trackName}
+                className={checked ? 'checkTrue' : 'checkFalse'}
+              >
                 <i className="fas fa-heart"></i>
                 <input
                   type="checkbox"
                   id={trackName}
                   name={trackName}
-                  // onChange={this.handleCheckMusic}
-                  // checked={verified}
-                  // className={styles.input}
+                  onChange={handleCheckMusic}
                 />
               </label>
             </div>
