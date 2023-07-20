@@ -1,102 +1,46 @@
-# Boas vindas ao repositório do projeto khrystianTunes!
+# Getting Started with Create React App
 
-## Habilidades
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Este projeto é capaz de:
+## Available Scripts
 
-  * Fazer requisições e consumir dados vindos de uma `API`;
+In the project directory, you can run:
 
-  * Utilizar os ciclos de vida de um componente React;
+### `yarn start`
 
-  * Utilizar a função `setState` de forma a garantir que um determinado código só é executado após o estado ser atualizado
-  
-  * Utilizar o componente `BrowserRouter` corretamente;
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-  * Criar rotas, mapeando o caminho da URL com o componente correspondente, via `Route`;
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-  * Utilizar o `Switch` do `React Router`
+### `yarn test`
 
-  * Usar o componente `Redirect` pra redirecionar para uma rota específica;
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-  * Criar links de navegação na aplicação com o componente `Link`;
+### `yarn build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
----
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## O que foi desenvolvido
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-KhrystianTunes, uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada. Essa aplicação será capaz de:
+### `yarn eject`
 
-  - Fazer login;
-  - Pesquisar por uma banda ou artista;
-  - Listar os álbuns disponíveis dessa banda ou artista;
-  - Visualizar as músicas de um álbum selecionado;
-  - Reproduzir uma prévia das músicas deste álbum;
-  - Favoritar e desfavoritar músicas;
-  - Ver a lista de músicas favoritas;
-  - Ver o perfil da pessoa logada;
-  - Editar o perfil da pessoa logada;
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
----
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Link do projeto
-Você pode acessar o projeto online no link abaixo:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-### https://khrystian-tunes.vercel.app/
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-![Captura de tela_2023-07-10_10-37-16](https://github.com/kelvynkhrystian/khrystianTunes/assets/94154348/a9261e72-460e-437d-ac40-1956db8136f9)
+## Learn More
 
----
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-# Atualização
-
-## Será criada uma nova branch, com a atualização do projeto com meus conhecimentos atuais, focando em Typescript, Context API, Styled Components, ...
-
----
----
----
-
-## Funções externas (não criei)
-
-## `userAPI.js`
-
-O arquivo `userAPI.js` será utilizado para manipular as informações da pessoa logada, dentro dele estarão as funções para recuperar e atualizar as informações da pessoa usuária, além de criar um novo perfil. Todas essas funções simulam o funcionamento de uma API.
-
-- Para recuperar as informações da pessoa usuária, utilize a função `getUser`. Ela retornará um objeto com as informações da pessoa logada caso exista.
-**Atenção:** caso não encontre nenhuma informação da banda ou artista, a API retornará um objeto vazio.
-
-- Para criar um novo perfil, utilize a função `createUser`, ela recebe como parâmetro o objeto que contém as informações da pessoa usuária. Esse objeto deverá conter a seguinte estrutura:
-
-```
-{
-  name: '',
-  email: '',
-  image: '',
-  description: '',
-}
-```
-
-Para atualizar as informações da pessoa logada, utilize a função `updateUser`. Assim como a função anterior, ela também recebe um objeto com as informações que serão atualizadas, esse objeto deve conter a mesma estrutura do anterior.
-
-## `searchAlbumsAPI.js`
-
-O arquivo `searchAlbumsAPI.js` contém uma função que faz uma requisição à uma API e retorna os álbuns de uma banda ou artista. Para essa função funcionar, ela recebe como parâmetro uma string, que deve ser o nome da banda ou artista. O retorno dessa função, quando encontra as informações, é um array com cada álbum dentro de um objeto.
-**Atenção:** caso não encontre nenhuma informação da banda ou artista, a API retornará um array vazio.
-
-## `favoriteSongsAPI.js`
-
-O arquivo `favoriteSongsAPI.js` é responsável por manipular as informações das músicas favoritas. Nele há as funções `getFavoriteSongs`, `addSong` e `removeSong`, que recuperam, adicionam e removem músicas dos favoritos, respectivamente. Assim como nos arquivos anteriores, todas as funções simulam o funcionamento de uma API.
-
-A função `getFavoriteSongs` retorna um array com as músicas favoritas ou um array vazio, caso não haja nenhuma música.
-
-A função `addSong` recebe um objeto que representa a música que você quer salvar como favorita e adiciona ao array já existente das músicas que já foram favoritadas.
-
-A função `removeSong` também recebe um objeto que representa a música que você deseja remover da lista de músicas favoritas. 
-
-**Atenção:** os objetos de música precisam ter a chave `trackId` para que as músicas sejam adicionadas e removidas corretamente.
-
-## `musicsAPI.js`
-
-O arquivo `musicsAPI.js` contém uma função que faz uma requisição à uma API e retorna os as músicas de um álbum, ela recebe como parâmetro uma string, que deve ser o id do álbum. O retorno dessa função, quando encontra as informações, é um array onde o primeiro elemento é um objeto com informações do álbum e o restante dos elementos são as músicas do álbum.
-**Atenção:** caso não encontre nenhuma informação, a API retornará um array vazio.
-
+To learn React, check out the [React documentation](https://reactjs.org/).
