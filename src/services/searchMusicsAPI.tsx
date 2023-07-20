@@ -11,7 +11,7 @@ export interface SearchMusic {
   trackName?: string;
   previewUrl?: string;
   // linha a baixo complicada
-  checked?: boolean;
+  checked?: boolean | undefined;
   musics?: SearchMusic | undefined;
   id?: number;
   name?: string;
@@ -38,6 +38,7 @@ const getMusicsAPI = async (id: string | undefined) => {
     trackId: item.trackId,
     trackName: item.trackName,
     previewUrl: item.previewUrl,
+    // checked: (item.checked = false),
   }));
   // console.log(response);
   return response;

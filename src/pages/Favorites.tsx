@@ -15,7 +15,7 @@ const Favorites = () => {
     getFavoritesMusics();
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 500);
   }, []);
 
   const getFavoritesMusics = () => {
@@ -44,8 +44,7 @@ const Favorites = () => {
                     musics={item}
                     id={item.trackId}
                     name={item.trackName}
-                    // checked={verified}
-                    // removeFavorite={this.removeFavorite}
+                    checked={item.checked}
                   />
                 </section>
               ))}

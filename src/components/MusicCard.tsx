@@ -9,7 +9,7 @@ const MusicCard = (props: SearchMusic) => {
   const { getFavorites, addFavorites, remFavorites } =
     useContext(FavoritesContext);
   const [loading, setLoading] = useState(true);
-  const [checked, setChecked] = useState(false);
+  const [checkedHearth, setCheckedHearth] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,52 +17,58 @@ const MusicCard = (props: SearchMusic) => {
     }, 1000);
   }, []);
 
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 500);
+  // }, [getFavorites]);
+
   const handleCheckMusic = (event: ChangeEvent<HTMLInputElement>) => {
     const check = event.target.checked;
-    console.log('favoritos');
-
-    //
 
     if (check) {
       addFavorites(musics ? musics : {});
-      setChecked(true);
-      console.log(getFavorites());
+      setCheckedHearth(true);
     } else {
       remFavorites(musics ? musics : {});
-      setChecked(false);
-      console.log(getFavorites());
+      setCheckedHearth(false);
     }
+
+    console.log(getFavorites());
   };
 
   return (
     <>
       <CardMusic>
-        {loading ? (
-          <Loading />
-        ) : (
-          <>
-            <div>
-              <h4>{trackName}</h4>
-              <label
-                htmlFor={trackName}
-                className={checked ? 'checkTrue' : 'checkFalse'}
-              >
-                <i className="fas fa-heart"></i>
-                <input
-                  type="checkbox"
-                  id={trackName}
-                  name={trackName}
-                  onChange={handleCheckMusic}
-                />
-              </label>
-            </div>
+        <>
+          {loading && <Loading />}
+          {!loading && (
+            <>
+              <div>
+                <h4>{trackName}</h4>
+                <label
+                  htmlFor={trackName}
+                  className={checkedHearth ? 'checkTrue' : 'checkFalse'}
+                >
+                  <i className="fas fa-heart"></i>
+                  <input
+                    type="checkbox"
+                    id={trackName}
+                    name={trackName}
+                    onChange={handleCheckMusic}
+                    // checked={true}
+                  />
+                </label>
+              </div>
 
-            <audio src={previewUrl} controls>
-              <track kind="captions" />O seu navegador não suporta o elemento
-              <code>audio</code>.
-            </audio>
-          </>
-        )}
+              <audio src={previewUrl} controls>
+                <track kind="captions" />O seu navegador não suporta o elemento
+                <code>audio</code>.
+              </audio>
+            </>
+          )}
+        </>
       </CardMusic>
     </>
   );
